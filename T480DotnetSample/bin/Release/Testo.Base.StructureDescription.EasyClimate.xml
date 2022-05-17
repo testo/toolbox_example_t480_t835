@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Testo.Base.StructureDescription.EasyClimate</name>
+    </assembly>
+    <members>
+        <member name="T:Testo.Base.StructureDescription.EasyClimate.DescriptionConverterEasyClimate">
+            <summary>
+            Converter vor StructureDescription Types
+            </summary>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.DescriptionConverterEasyClimate.TypeToNewNodeImage(Testo.Base.StructureDescription.NodeType)">
+            <summary>
+            Types to node image.
+            </summary>
+            <param name="typeValue">The type value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.DescriptionConverterEasyClimate.TypeToChangedNodeImage(Testo.Base.StructureDescription.NodeType)">
+            <summary>
+            Types to changed node image.
+            </summary>
+            <param name="typeValue">The type value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.DescriptionConverterEasyClimate.TypeToUnchangedNodeImage(Testo.Base.StructureDescription.NodeType)">
+            <summary>
+            Types to unchanged node image.
+            </summary>
+            <param name="typeValue">The type value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.DescriptionConverterEasyClimate.TypeToAddNodeImage(Testo.Base.StructureDescription.NodeType)">
+            <summary>
+            Types to add node image.
+            </summary>
+            <param name="typeValue">The type value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.DescriptionConverterEasyClimate.TypeToString(Testo.Base.StructureDescription.NodeType)">
+            <summary>
+            Type to string.
+            </summary>
+            <param name="typeValue">The type value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.DescriptionConverterEasyClimate.TypeToDefaultName(Testo.Base.StructureDescription.NodeType)">
+            <summary>
+            Types to default name.
+            </summary>
+            <param name="typeValue">The type value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.DescriptionConverterEasyClimate.StringToNodeType(System.String)">
+            <summary>
+            String to bool attribute.
+            </summary>
+            <param name="strValue">The STR value.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Testo.Base.StructureDescription.EasyClimate.DescriptionConverterEasyClimate.StringPrefix">
+            <summary>
+            Gets the string prefix.
+            </summary>
+            <value>The string prefix.</value>
+        </member>
+        <member name="T:Testo.Base.StructureDescription.EasyClimate.MeasurementParameterDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.MeasurementParameterDescription.CreateMeasurementParameterGroup(Testo.Base.StructureDescription.Node,Testo.Base.StructureDescription.AttributeGroupType)">
+            <summary>
+            Creates a measurement parameter group (base for RLT, Turbulence and simple measurement ).
+            </summary>
+            <param name="nodeDescription">The node description.</param>
+            <param name="attributeGroupType">Type of the attribute group.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.MeasurementParameterDescription.T480(Testo.Base.StructureDescription.Node)">
+            <summary>
+            Measurements the parameter description.
+            </summary>
+            <param name="measurementNodeDescription">The measurement node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.MeasurementParameterDescription.Pmv(Testo.Base.StructureDescription.Node)">
+            <summary>
+            PMVs the measurement parameter description.
+            </summary>
+            <param name="pmvMeasurementNodeDescription">The PMV measurement node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.MeasurementParameterDescription.Net(Testo.Base.StructureDescription.Node)">
+            <summary>
+            Net measurement parameter description.
+            </summary>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.MeasurementParameterDescription.Rlt(Testo.Base.StructureDescription.Node)">
+            <summary>
+            RLTs the measurement parameter description.
+            </summary>
+            <param name="rltMeasurementNodeDescription">The RLT measurement node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.MeasurementParameterDescription.T835(Testo.DB.Config,Testo.Base.StructureDescription.Node)">
+            <summary>
+            T835s the specified config.
+            </summary>
+            <param name="config">The config.</param>
+            <param name="t835MeasurementNodeDescription">The T835 measurement node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.MeasurementParameterDescription.TurbulenceIntensity(Testo.DB.Config,Testo.Base.StructureDescription.Node)">
+            <summary>
+            Turbulences the intensity.
+            </summary>
+            <param name="config">The config.</param>
+            <param name="turbulenceIntensityMeasurementNodeDescription">The turbulence intensity measurement node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.MeasurementParameterDescription.Wbgt(Testo.Base.StructureDescription.Node)">
+            <summary>
+            WBGTs the specified WBGT measurement node description.
+            </summary>
+            <param name="wbgtMeasurementNodeDescription">The WBGT measurement node description.</param>
+        </member>
+        <member name="T:Testo.Base.StructureDescription.EasyClimate.ParameterDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ParameterDescription.Folder(Testo.Base.StructureDescription.Node)">
+            <summary>
+            Folders the parameter description.
+            </summary>
+            <param name="folderNodeDescription">The folder node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ParameterDescription.MeasureSite(Testo.Base.StructureDescription.Node)">
+            <summary>
+            Measures the site.
+            </summary>
+            <param name="measureSiteNodeDescription">The measure site node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ParameterDescription.MeasuringPoint(Testo.DB.Config,Testo.Base.StructureDescription.Node)">
+            <summary>
+            Measurings the point.
+            </summary>
+            <param name="config">The config.</param>
+            <param name="measuringPointNodeDescription">The measuring point node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ParameterDescription.Report(Testo.Base.StructureDescription.Node)">
+            <summary>
+            Reports the specified report node description.
+            </summary>
+            <param name="reportNodeDescription">The report node description.</param>
+        </member>
+        <member name="T:Testo.Base.StructureDescription.EasyClimate.ParameterDescriptionHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ParameterDescriptionHelper.CreateStandardGroup(Testo.Base.StructureDescription.Node,Testo.Base.StructureDescription.AttributeGroupType)">
+            <summary>
+            Creates the standard group with default easy climate parameters
+            </summary>
+            <param name="nodeDescription">The node description.</param>
+            <param name="attributeGroupType">Type of the attribute group.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ParameterDescriptionHelper.SetUserUnitPressure(Testo.DB.Config,Testo.Base.StructureDescription.FloatAttribute)">
+            <summary>
+            Sets the user unit pressure.
+            </summary>
+            <param name="config">The config.</param>
+            <param name="floatAttribute">The float attribute.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ParameterDescriptionHelper.SetUserUnitTemperature(Testo.DB.Config,Testo.Base.StructureDescription.FloatAttribute)">
+            <summary>
+            Sets the user unit temperature.
+            </summary>
+            <param name="config">The config.</param>
+            <param name="floatAttribute">The float attribute.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ParameterDescriptionHelper.SetUserUnitVelocity(Testo.DB.Config,Testo.Base.StructureDescription.FloatAttribute)">
+            <summary>
+            Sets the user unit velocity.
+            </summary>
+            <param name="config">The config.</param>
+            <param name="floatAttribute">The float attribute.</param>
+        </member>
+        <member name="T:Testo.Base.StructureDescription.EasyClimate.ProgramParameterDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ProgramParameterDescription.MeasuringProgram(Testo.Base.StructureDescription.Node)">
+            <summary>
+            Measurings the program parameter description.
+            </summary>
+            <param name="measuringProgramNodeDescription">The measuring program node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ProgramParameterDescription.Net(Testo.Base.StructureDescription.Node)">
+            <summary>
+            creates the specified Net measuring program node description.
+            </summary>
+            <param name="nodeDescription">The PMV measuring program node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ProgramParameterDescription.Pmv(Testo.Base.StructureDescription.Node)">
+            <summary>
+            creates the specified PMV measuring program node description.
+            </summary>
+            <param name="nodeDescription">The PMV measuring program node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ProgramParameterDescription.Rlt(Testo.Base.StructureDescription.Node)">
+            <summary>
+            RLTs the specified RLT measurement folder node description.
+            </summary>
+            <param name="rltMeasurementFolderNodeDescription">The RLT measurement folder node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ProgramParameterDescription.Turbulence(Testo.Base.StructureDescription.Node)">
+            <summary>
+            Turbulences the specified turbulence intensity measurement folder node description.
+            </summary>
+            <param name="turbulenceIntensityMeasurementFolderNodeDescription">The turbulence intensity measurement folder node description.</param>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.ProgramParameterDescription.Wbgt(Testo.Base.StructureDescription.Node)">
+            <summary>
+            WBGTs the specified WBGT measuring program node description.
+            </summary>
+            <param name="wbgtMeasuringProgramNodeDescription">The WBGT measuring program node description.</param>
+        </member>
+        <member name="T:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate">
+            <summary>
+            manage FrameworkArchive Description for EasyClimate
+            </summary>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.#ctor(Testo.DataAccess.Interfaces.IDatabase)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.CreateTreeDescription">
+            <summary>
+            Creates the tree description.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.CreateTreeDescription480(Testo.Base.StructureDescription.StructureRoot,Testo.Base.StructureDescription.Node,Testo.Base.StructureDescription.Node,Testo.Base.StructureDescription.Node,Testo.Base.StructureDescription.Node)">
+            <summary>
+            Creates the tree description part for testo 480.
+            </summary>
+            <param name="root">The root.</param>
+            <param name="measureSiteNodeDescription">The measure site node description.</param>
+            <param name="defaultMeasuringPointNodeDescription">The default measuring point node description.</param>
+            <param name="reportNodeDescription">The report node description.</param>
+            <param name="folderDescription">The folder description.</param>
+            <returns>The tree.</returns>
+        </member>
+        <member name="M:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.CreateTreeDescription835(Testo.Base.StructureDescription.StructureRoot,Testo.Base.StructureDescription.Node,Testo.Base.StructureDescription.Node)">
+            <summary>
+            Creates the tree description part for testo 835.
+            </summary>
+            <param name="root">The root.</param>
+            <param name="rootNodeDescription">The root node description.</param>
+            <param name="folderNodeDescription">The folder node description.</param>
+            <returns>The tree.</returns>
+        </member>
+        <member name="P:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.AutomaticSave">
+            <summary>
+            Gets a value indicating whether [automatic save].
+            </summary>
+            <value><c>true</c> if [automatic save]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.AllowsToCopyProtocolsToDevice">
+            <summary>
+            Gets or sets a value indicating whether this description allows to copy protocols to device.
+            </summary>
+            <value>
+            	<c>true</c> if [allows copy protocols to device]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.MeasurementNodeTypes">
+            <summary>
+            Gets the measurement node types.
+            </summary>
+            <value>The measurement node types.</value>
+        </member>
+        <member name="P:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.RootDescription">
+            <summary>
+            Gets or sets the root description.
+            </summary>
+            <value>The root description.</value>
+        </member>
+        <member name="P:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.RootNodeDescription">
+            <summary>
+            Gets or sets the root node description.
+            </summary>
+            <value>The root node description.</value>
+        </member>
+        <member name="P:Testo.Base.StructureDescription.EasyClimate.StructureDescriptionEasyClimate.MeasurementNodeDescription">
+            <summary>
+            Gets or sets the measure site node description.
+            </summary>
+            <value>The measure site node description.</value>
+        </member>
+    </members>
+</doc>

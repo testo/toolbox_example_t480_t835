@@ -1,0 +1,1539 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Testo.Instrument.Testo480</name>
+    </assembly>
+    <members>
+        <member name="T:Testo.Instrument.Testo480.Testo480">
+            <summary>
+            implements the methods of the IBasicInfos interface in the device driver
+            </summary>
+            <summary>
+            implements the methods of the IBasicCapacities interface in the device driver
+            </summary>
+            <summary>
+            part of the device driver to get or set the language in the instrument
+            </summary>
+            <summary>
+            part of the device driver to get or set the printer texts of the instrument
+            </summary>
+            <summary>
+            part of the device driver to get or set the language in the instrument
+            </summary>
+            <summary>
+            part of the device driver to get or set the language in the instrument
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.DoFactoryReset">
+            <summary>
+            Restor the settings on device.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.DoFirmwareUpdate(System.String)">
+            <summary>
+            Does the firmware update.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.SaveDeviceOwner">
+            <summary>
+            Saves the energy manager settings.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.SaveEnergyManager">
+            <summary>
+            Saves the energy manager settings.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.GetPrintText(System.Int32)">
+            <summary>
+            get one printer line
+            </summary>
+            <param name="iLine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.SetPrintText(System.Int32,System.String)">
+            <summary>
+            set one printer line
+            </summary>
+            <param name="iLine"></param>
+            <param name="strText"></param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.SavePrintSettings">
+            <summary>
+            Saves the print settings.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.Connect">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.Disconnect">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.IsAlive">
+            <summary>
+            check if instrument is alive (not switched off)
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.GetPrintTextNumber">
+            <summary>
+            Liefert die Anzahl der Textzeilen zurück, die gedruckt werden können
+            </summary>
+            <returns>Anzahl der Textzeilen</returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.SynchronizeRAM">
+            <summary>
+            is required by some device after configuration
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.GetPhysValName(System.Int32)">
+            <summary>
+            Gets the name of the phys val.
+            </summary>
+            <param name="physval">The physval.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.ThrowDeviceError(Testo.Instrument.DeviceError,System.String)">
+            <summary>
+            Throws the device error but logs it before.
+            </summary>
+            <param name="err">The err.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.GetOnlineChannels">
+            <summary>
+            extract channels marked as favorites from available online channels
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.GetOnlineValues">
+            <summary>
+            read the actual online values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.GetMinOnlineCycle">
+            <summary>
+            Minimal allowed measure cycle during an online measurement (in seconds)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.StartOnline">
+            <summary>
+            Starte Online Messung. Führt eventuell eine Nullung durch
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.StopOnline">
+            <summary>
+            Beendet eine Online Messung
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.IsOnlineReady">
+            <summary>
+            Gibt zurück, ob der Device für eine Online
+            Messung bereit ist. 
+            </summary>
+            <returns>true: ready, false: muss noch warten</returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.GetCompatibleUnitValue(Testo.Library.Measurement.Unit)">
+            <summary>
+            Gets the compatible unit to set into the device for a given device unit.
+            </summary>
+            <param name="deviceUnit">The device unit.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480.UpdateUnitsOnDevice">
+            <summary>
+            Updates the units on device.
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Name">
+            <summary>
+            returns the name of this instrument
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.DateTime">
+            <summary>
+            set/get real time clock of analyzer
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.MemoryUsage">
+            <summary>
+            Gets the memory usage.
+            </summary>
+            <value>The memory usage.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.TotalMemory">
+            <summary>
+            Gets the total memory.
+            </summary>
+            <value>The total memory.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.BatteryLevel">
+            <summary>
+            Gets the battery level.
+            </summary>
+            <value>The battery level.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.FirmwareDate">
+            <summary>
+            get firmware version of instrument (XX.YY)
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.LastService">
+            <summary>
+            Gets the last service.
+            </summary>
+            <value>The last service.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerName">
+            <summary>
+            Gets or sets the name of the owner.
+            </summary>
+            <value>The name of the owner.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerCompany">
+            <summary>
+            Gets or sets the owner company.
+            </summary>
+            <value>The owner company.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerStreet">
+            <summary>
+            Gets or sets the owner street.
+            </summary>
+            <value>The owner street.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerCity">
+            <summary>
+            Gets or sets the owner city.
+            </summary>
+            <value>The owner city.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerPlz">
+            <summary>
+            Gets or sets the Postal code.
+            </summary>
+            <value>The owner postal code.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerPhone">
+            <summary>
+            Gets or sets the owner phone.
+            </summary>
+            <value>The owner phone.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerFax">
+            <summary>
+            Gets or sets the owner fax.
+            </summary>
+            <value>The owner fax.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerMobile">
+            <summary>
+            Gets or sets the owner mobile.
+            </summary>
+            <value>The owner mobile.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerEmail">
+            <summary>
+            Gets or sets the owner email.
+            </summary>
+            <value>The owner email.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerHomepage">
+            <summary>
+            Gets or sets the owner homepage.
+            </summary>
+            <value>The owner homepage.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerNameMaxLength">
+            <summary>
+            Gets the length of the owner name max.
+            </summary>
+            <value>The length of the owner name max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerCompanyMaxLength">
+            <summary>
+            Gets the length of the owner company max.
+            </summary>
+            <value>The length of the owner company max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerStreetMaxLength">
+            <summary>
+            Gets the length of the owner street max.
+            </summary>
+            <value>The length of the owner street max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerCityMaxLength">
+            <summary>
+            Gets the length of the owner city max.
+            </summary>
+            <value>The length of the owner city max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerPlzMaxLength">
+            <summary>
+            Gets the length of the owner PLZ max.
+            </summary>
+            <value>The length of the owner PLZ max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerFaxMaxLength">
+            <summary>
+            Gets the length of the owner fax max.
+            </summary>
+            <value>The length of the owner fax max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerPhoneMaxLength">
+            <summary>
+            Gets the length of the owner phone max.
+            </summary>
+            <value>The length of the owner phone max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerMobileMaxLength">
+            <summary>
+            Gets the length of the owner mobile max.
+            </summary>
+            <value>The length of the owner mobile max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerEmailMaxLength">
+            <summary>
+            Gets the length of the owner email max.
+            </summary>
+            <value>The length of the owner email max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.OwnerHomepageMaxLength">
+            <summary>
+            Gets the length of the owner homepage max.
+            </summary>
+            <value>The length of the owner homepage max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.AutoOffFlag">
+            <summary>
+            Gets or sets a value indicating whether [auto off flag].
+            </summary>
+            <value><c>true</c> if [auto off flag]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.BacklightFlag">
+            <summary>
+            Gets or sets a value indicating whether [backlight flag].
+            </summary>
+            <value><c>true</c> if [backlight flag]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.AutoOffTime">
+            <summary>
+            Gets or sets the auto off time.
+            </summary>
+            <value>The auto off time.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.BacklightTime">
+            <summary>
+            Gets or sets the backlight time.
+            </summary>
+            <value>The backlight time.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Brightness">
+            <summary>
+            Gets or sets the brightness.
+            </summary>
+            <value>The brightness.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.MaxPrintTextLength">
+            <summary>
+            max length of printer text lines
+            </summary>
+            <value></value>
+            <returns></returns>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.MeasureSiteInfo">
+            <summary>
+            Gets a value indicating whether [measure site info].
+            </summary>
+            <value><c>true</c> if [measure site info]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.MeasurePointInfo">
+            <summary>
+            Gets a value indicating whether [measure point info].
+            </summary>
+            <value><c>true</c> if [measure point info]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.AdjustmentData">
+            <summary>
+            Gets or sets a value indicating whether [adjustment data].
+            </summary>
+            <value><c>true</c> if [adjustment data]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Logo">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Testo.Instrument.Interfaces.IPrinterTextsTesto480"/> is logo.
+            </summary>
+            <value><c>true</c> if logo; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Parameter">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Testo.Instrument.Interfaces.IPrinterTextsTesto480"/> is parameter.
+            </summary>
+            <value><c>true</c> if parameter; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Scaling">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Testo.Instrument.Interfaces.IPrinterTextsTesto480"/> is scaling.
+            </summary>
+            <value><c>true</c> if scaling; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.ProbeConfiguration">
+            <summary>
+            Gets or sets a value indicating whether [probe configuration].
+            </summary>
+            <value><c>true</c> if [probe configuration]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Footer">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Testo.Instrument.Interfaces.IPrinterTextsTesto480"/> is footer.
+            </summary>
+            <value><c>true</c> if footer; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.PrintSettings">
+            <summary>
+            Gets the print settings.
+            </summary>
+            <value>The print settings.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.LogoFile">
+            <summary>
+            Gets or sets the logo file.
+            </summary>
+            <value>The logo file.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Probes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>The password.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.PasswordProtection">
+            <summary>
+            Gets or sets a value indicating whether [protect fw update].
+            </summary>
+            <value><c>true</c> if [protect fw update]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.PossibleLanguages">
+            <summary>
+            returns a list with possible languages for this instrument
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Language">
+            <summary>
+            get / set the actual display language of the instrument
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.T480Device">
+            <summary>
+            The 480 Device
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.DevicePath">
+            <summary>
+            The root directory of the device
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.DataPath">
+            <summary>
+            The root directory of the device
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.IsConnected">
+            <summary>
+            returns if instrument is already connected
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.Sysname">
+            <summary>
+            system name (Testo 480)
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.SerialNumber">
+            <summary>
+            serial number
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.FirmwareVersion">
+            <summary>
+            get the firmware version
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.DeviceType">
+            <summary>
+            returns the device type. Only one version, testo 570
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.NeedsReset">
+            <summary>
+            Gets or sets a value indicating whether [needs reset].
+            </summary>
+            <value><c>true</c> if [needs reset]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.InstrumentErrorState">
+            <summary>
+            Gets the error state of the instrument.
+            </summary>
+            <value>The Error state of the instrument.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.TemperatureUnit">
+            <summary>
+            get / set the unit of the temperature
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.PressureUnit">
+            <summary>
+            get / set the unit of standard pressure
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.HumidityUnit">
+            <summary>
+            unit for the low humidity
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480.FlowUnit">
+            <summary>
+            unit for the flow
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.Const480">
+            <summary>
+            Constants used for the testo 480 driver
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthPrinterText">
+            <summary>
+            length of one printer text
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerCity">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerName">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerStreet">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerCompany">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerPlz">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerTel">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerFax">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerMobile">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerEmail">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.Const480.MaxLengthOwnerHomePage">
+            <summary>
+            max length of owner information in the device
+            </summary>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.FileProtocolFromNodeConverter">
+            <summary>
+            add new node to dev480 with data from archive node
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.ModifyWMmFile(Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Framework.Archive.DA.ArchiveNodeData,System.String)">
+            <summary>
+            Modifies the W mm file.
+            </summary>
+            <param name="treeDescription">The tree description.</param>
+            <param name="archiveNodeData">The archive node data.</param>
+            <param name="parentNodeData">The parent node data.</param>
+            <param name="currentPath">The current path.</param>
+            <returns>true if modification was possible, succeed == true</returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.ModifyWMmFileInfo(Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Framework.Archive.DA.ArchiveNodeData,wrapmmgr.WMmFile,System.String)">
+            <summary>
+            Modifies the W mm file info.
+            </summary>
+            <param name="treeDescription">The tree description.</param>
+            <param name="archiveNodeData">The archive node data.</param>
+            <param name="parentNodeData">The parent node data.</param>
+            <param name="wmmFile">The WMM file.</param>
+            <param name="currentPath">The current path.</param>
+            <returns>true if modification was possible, succeed == true</returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.DeleteWMmFile(System.String)">
+            <summary>
+            Deletes the W mm file.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.CreateSyncOrRoot(System.String)">
+            <summary>
+            Creates the sync.
+            </summary>
+            <param name="fullArgFilePath">The full arg file path.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.CreateWMmFileFromArchiveNodeData(Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Framework.Archive.DA.ArchiveNodeData,System.String)">
+            <summary>
+            Creates the WMmfile from archive node and returns the path to the new created File.
+            If the node type is not suitable for a Testo 480 device it returns an empty string.
+            </summary>
+            <param name="treeDescription">The tree description.</param>
+            <param name="archiveNodeData">The archive node.</param>
+            <param name="parentNodeData">The parent node data (used for rlt)</param>
+            <param name="currentPath">The current path.</param>
+            <returns>the path to the new created file or empty string if the node type isn't suitable</returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.SetFileInfoInWMmLocation(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Base.StructureDescription.NodeType,wrapmmgr.WMmLocation)">
+            <summary>
+            Gets the archive node from location.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="nodetype">The nodetype.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.SetFileInfoInWMmPoint(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Base.StructureDescription.NodeType,wrapmmgr.WMmPoint)">
+            <summary>
+            Gets the archive node from point.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="nodetype">The nodetype.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.SetFileInfoInWMmProgRlt(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Base.StructureDescription.NodeType,wrapmmgr.WMmProgRlt)">
+            <summary>
+            Sets the file info in W mm prog RLT.
+            </summary>
+            <param name="parentData">The parent data.</param>
+            <param name="nodeData">The node data.</param>
+            <param name="nodetype">The nodetype.</param>
+            <param name="file">The file.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.SetFileInfoInWMmProg(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Base.StructureDescription.NodeType,wrapmmgr.WMmProg)">
+            <summary>
+            Gets the archive node from prog.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="nodetype">The nodetype.</param>
+            <param name="file">The file.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.SetFileInfoInWMmProgNET(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Base.StructureDescription.NodeType,wrapmmgr.WMmProgNET)">
+            <summary>
+            Sets the file info in WMmProgNET
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.SetFileInfoInWMmProgPmv(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Base.StructureDescription.NodeType,wrapmmgr.WMmProgPmv)">
+            <summary>
+            Sets the file info in W mm prog PMV.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="nodetype">The nodetype.</param>
+            <param name="file">The file.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolFromNodeConverter.SetFileInfoInWMmProgWbgt(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.Base.StructureDescription.NodeType,wrapmmgr.WMmProgWbgt)">
+            <summary>
+            Sets the file info in W mm prog WBGT.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="nodetype">The nodetype.</param>
+            <param name="file">The file.</param>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.FileProtocolToNodeConverter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNode(Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,wrapmmgr.WMmFile,wrapmmgr.WMmFileInfoEntry)">
+            <summary>
+            Gets the archive node.
+            </summary>
+            <param name="treeDescription">The tree description.</param>
+            <param name="file">The file.</param>
+            <param name="fileInfoEntry">The e.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetNodeTypeFromFileName(System.String)">
+            <summary>
+            Gets the name of the node type from file.
+            </summary>
+            <param name="fileNameAndPath">The file name and path.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetNameFromFileName(System.String)">
+            <summary>
+            Gets the name of the measurement from file.
+            </summary>
+            <param name="fileNameAndPath">The file name and path.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeFromFileName(Testo.Framework.Archive.DA.ArchiveNodeData,System.String,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription)">
+            <summary>
+            Gets the name of the archive node from file.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="fileNameAndPath">The file name and path.</param>
+            <param name="treeDescription">The tree description.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeFromProtocol(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,wrapmmgr.WMmFileProtocol)">
+            <summary>
+            Gets the archive node from protocol int.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="treeDescription">The tree description.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeFromProtocolPmv(Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,wrapmmgr.WMmFileProtocolPMV)">
+            <summary>
+            Gets the archive node from protocol PMV.
+            </summary>
+            <param name="treeDescription">The tree description.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeFromLocation(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,wrapmmgr.WMmLocation)">
+            <summary>
+            Gets the archive node from location.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="treeDescription">The tree description.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeFromPoint(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,wrapmmgr.WMmPoint)">
+            <summary>
+            Gets the archive node from point.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="treeDescription">The tree description.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeRltMeasurementFolderFromProgRlt(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,wrapmmgr.WMmProgRlt)">
+            <summary>
+            Gets the archive node from prog RLT.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="treeDescription">The tree description.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+            int groupPoints = rltMeasurementFolderNodeDescription.CreateParameterGroupDescription(AttributeGroupType.MeasuringPoints);
+            int group1 = rltMeasurementFolderNodeDescription.CreateParameterGroupDescription(AttributeGroupType.HolePosition);
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeTurbMeasurementFolderFromProgTurb(Testo.Framework.Archive.DA.ArchiveNodeData,wrapmmgr.WMmProgTurb)">
+            <summary>
+            Gets the archive node from prog turb.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeFromWMmFileProtocolTURB(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,wrapmmgr.WMmFileProtocolTURB)">
+            <summary>
+            Gets the archive node from prot turb .
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="treeDescription">The tree description.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeFromWMmFileProtocolRLT(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,wrapmmgr.WMmFileProtocolRLT)">
+            <summary>
+            Gets the archive node from prot RLT .
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="treeDescription">The tree description.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeFromProg(Testo.Framework.Archive.DA.ArchiveNodeData,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,wrapmmgr.WMmProg)">
+            <summary>
+            Gets the archive node from prog.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="treeDescription">The tree description.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.FileProtocolToNodeConverter.GetArchiveNodeFromFolder(Testo.Framework.Archive.DA.ArchiveNodeData,wrapmmgr.WMmFolder)">
+            <summary>
+            Gets the archive node from folder.
+            </summary>
+            <param name="nodeData">The node data.</param>
+            <param name="file">The file.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.OnlineChannel480">
+            <summary>
+            device specific variation
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.OnlineChannel480.OnlineValueIndex">
+            <summary>
+            index at the result of T480Device.ReadOnlineValues()
+            </summary>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.AdditionalMeasurementInfo">
+            <summary>
+            read attributes from protocol path
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.AdditionalMeasurementInfo.NumberOfWbgtChannels">
+            <summary>
+            The number of channels in a WBGT measurement.
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.AdditionalMeasurementInfo._rltVelocityUnitFromSettings">
+            <summary>
+            still needed, because firmware doesn't/didn't provide user unit in wUnit, but always the ISO unit (see 100251-1648)
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.AdditionalMeasurementInfo._rltVolumeFlowUnitFromProtocol">
+            <summary>
+            simplification because here the user unit was missing as well (see 100251-1648)
+            same mechanism is used at Testo.BusinessObjects.Measurement.RLT.RltDataReader
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Testo.Instrument.Testo480.AdditionalMeasurementInfo"/> class.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.Initialize(Testo.BusinessObjects.Measurement.Interfaces.IProtocolManager,System.Collections.Generic.IEnumerable{Testo.Framework.Archive.BL.Interfaces.IArchiveNode},Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,Testo.Library.Measurement.Unit,Testo.Library.Measurement.Unit,Testo.Library.Measurement.Unit)">
+            <summary>
+            Initializes the specified node.
+            </summary>
+            <param name="protocolManager">The protocol manager with a completely read IProtocol.</param>
+            <param name="nodes">the nodes list.</param>
+            <param name="testoArchiveTreeDescription">The testo archive tree description</param>
+            <param name="preferedTemperature">The prefered temperature.</param>
+            <param name="preferedClimatePressure">The prefered climate pressure.</param>
+            <param name="preferedFlow"></param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.InitializeGeneralMeasurementGroups(Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,Testo.BusinessObjects.Measurement.Interfaces.IProtocol,Testo.Framework.Archive.BL.Interfaces.IArchiveNode)">
+            <summary>
+            reading additional data the protocol.
+            </summary>
+            <param name="treeDescription">The tree description.</param>
+            <param name="proto">The proto.</param>
+            <param name="parentNode">the parent node of one node, we expect that all measurement protocols has the same parent</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.initializeGroups(System.String,Testo.BusinessObjects.Measurement.Interfaces.IProtocol)">
+            <summary>
+            Initialize the group.
+            </summary>
+            <param name="currentPath">The current path.</param>
+            <param name="protocol"> </param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.ReadWMmFileProtocolPMV(wrapmmgr.WMmFileProtocolPMV,Testo.BusinessObjects.Measurement.Interfaces.IProtocol)">
+            <summary>
+            read measurements and parent info
+            </summary>
+            <param name="wMmProt">The w mm prot.</param>
+            <param name="protocol">The protocol.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.ReadWMmProgWBGT(Testo.BusinessObjects.Measurement.Interfaces.IProtocol)">
+            <summary>
+            WBGT Mittelwerte berechnen .
+            </summary>
+            <param name="protocol">The protocol.</param>
+            <remarks>Achtung diese Funktion wird auch für normale Messungen aufgerufen, weil wir keinen Messtyp WBGT haben.</remarks>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.IsWbgtMeasurement(Testo.BusinessObjects.Measurement.Interfaces.IProtocol)">
+            <summary>
+            Tries to determines whether this is a WBGT measurement in the specified protocol.
+            </summary>
+            <param name="protocol">The protocol.</param>
+            <returns>
+              <c>true</c> if this is a WBGT measurement in the specified protocol; otherwise, <c>false</c>.
+            </returns>
+            <remarks>As a criteria this method uses the number of channels (5) and the units of the channels which all must be a temperature unit.</remarks>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.IsTemperatureUnit(Testo.Library.Measurement.Unit)">
+            <summary>
+            Determines whether the specified unit is a temperature unit.
+            </summary>
+            <param name="unit">The unit.</param>
+            <returns>
+              <c>true</c> if [the specified unit is a temperature unit; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.ReadWMmProg(wrapmmgr.WMmFileProtocol)">
+            <summary>
+            read measurements and parent info
+            </summary>
+            <param name="wMmProt"></param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.AdditionalMeasurementInfo.IsWeirdSerialNumberOfUnknownOrigin(System.String)">
+            <summary>
+            Determines whether the specified serial is the weird serial number of unknown origin (as described in 100251-799 #2)
+            This serial number should be filtered out (only occured on normal measurements so far and not on RLT, WB... or Turbulence)
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.AdditionalMeasurementInfo.Groups">
+            <summary>
+            Gets a dictionary of info groups
+            </summary>
+            <value>The protocol attributes.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.AdditionalMeasurementInfo.ProtocolMeasureSiteAttributes">
+            <summary>
+            Gets the protocol attributes.
+            </summary>
+            <value>The protocol attributes.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.AdditionalMeasurementInfo.ProtocolMeasuringPointAttributes">
+            <summary>
+            Gets the protocol measuring point attributes.
+            </summary>
+            <value>The protocol measuring point attributes.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.AdditionalMeasurementInfo.ProtocolMeasuringProgramAttributes">
+            <summary>
+            Gets the protocol measuring program attributes.
+            </summary>
+            <value>The protocol measuring program attributes.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.AdditionalMeasurementInfo.ProtocolAttributes">
+            <summary>
+            Gets the protocol attributes.
+            </summary>
+            <value>The protocol attributes.</value>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.ProtocolColonHack">
+            <summary>
+            class to handle the additional (virtual) colon displayed in device and print when there are multiple measurements per minute (defect 100251-1514)
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.ProtocolColonHack.LooksLikeMultipleMinutesWithoutColon(System.String)">
+            <summary>
+            is protocol with seconds but without colon, like for example "17.02.16 09:3348"
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.ProtocolColonHack.LooksLikeMultipleMinutesWithColon(System.String)">
+            <summary>
+            is protocol with seconds and colon, like for example "17.02.16 09:33:48"
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.ProtocolColonHack.AddFakedColon(System.String)">
+            <summary>
+            fakes the additional colon if needed
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.ProtocolColonHack.RemoveFakedColon(System.String)">
+            <summary>
+            removes the additional faked colon if present
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480AdjustmentData.Unit">
+            <summary>
+            Gets the unit.
+            </summary>
+            <value>The unit.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480AdjustmentData.UseAdjustmentData">
+            <summary>
+            Gets or sets a value indicating whether [use adjustment data].
+            </summary>
+            <value><c>true</c> if [use adjustment data]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480AdjustmentData.CertificateNumber">
+            <summary>
+            Gets or sets the certificate number.
+            </summary>
+            <value>The certificate number.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480AdjustmentData.IssueDate">
+            <summary>
+            Gets or sets the issue date.
+            </summary>
+            <value>The issue date.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480AdjustmentData.ValidUntil">
+            <summary>
+            Gets or sets the valid until.
+            </summary>
+            <value>The valid until.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480AdjustmentData.UsedPoints">
+            <summary>
+            Gets or sets the used points.
+            </summary>
+            <value>The used points.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480AdjustmentData.AdjustmentValues">
+            <summary>
+            Gets or sets the adjustment values.
+            </summary>
+            <value>The adjustment values.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480AdjustmentData.PhysVal">
+            <summary>
+            Gets or sets the phys val.
+            </summary>
+            <value>The phys val.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480AdjustmentData.Exponent">
+            <summary>
+            Gets or sets the exponent.
+            </summary>
+            <value>The exponent.</value>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.T480DriverExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.SetExpiryDate(wrapmmgr._WTCALINFO,System.DateTime)">
+            <summary>
+            Sets the expiry date.
+            </summary>
+            <param name="calInfo">The cal info.</param>
+            <param name="expDate">The exp date.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.GetExpiryDate(wrapmmgr._WTCALINFO)">
+            <summary>
+            Gets the expiry date.
+            </summary>
+            <param name="calInfo">The cal info.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.SetCalDate(wrapmmgr._WTCALINFO,System.DateTime)">
+            <summary>
+            Sets the cal date.
+            </summary>
+            <param name="calInfo">The cal info.</param>
+            <param name="calDate">The cal date.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.GetCalDate(wrapmmgr._WTCALINFO)">
+            <summary>
+            Gets the expiry date.
+            </summary>
+            <param name="calInfo">The cal info.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.SetData(wrapmmgr._WTCALINFO,Testo.Instrument.Interfaces.IT480AdjustmentData)">
+            <summary>
+            Sets the data.
+            </summary>
+            <param name="calInfo">The cal info.</param>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.IsEqual(wrapmmgr._WPRINTSETTINGS,wrapmmgr._WPRINTSETTINGS)">
+            <summary>
+            Compares _WPRINTSETTINGS.
+            </summary>
+            <param name="s1">The s1.</param>
+            <param name="s2">The s2.</param>
+            <returns>false if not equal</returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.IsEqual(wrapmmgr._WEEPENERGYMANGER,wrapmmgr._WEEPENERGYMANGER)">
+            <summary>
+            Compares _WEEPENERGYMANGER.
+            </summary>
+            <param name="s1">The s1.</param>
+            <param name="s2">The s2.</param>
+            <returns>false if not equal</returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.IsEqual(wrapmmgr._WEEPDEVICEOWNER,wrapmmgr._WEEPDEVICEOWNER)">
+            <summary>
+            Compares _WEEPDEVICEOWNER.
+            </summary>
+            <param name="s1">The s1.</param>
+            <param name="s2">The s2.</param>
+            <returns>false if not equal</returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.IsEqual(wrapmmgr._WTCALINFO,wrapmmgr._WTCALINFO)">
+            <summary>
+            Compares _WTCALINFO.
+            </summary>
+            <param name="s1">The s1.</param>
+            <param name="s2">The s2.</param>
+            <returns>false if not equal</returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480DriverExtensions.IsEqual(wrapmmgr._WTCALINFO,Testo.Instrument.Interfaces.IT480AdjustmentData)">
+            <summary>
+            Compares _WTCALINFO.
+            </summary>
+            <param name="s1">The s1.</param>
+            <param name="s2">The s2.</param>
+            <returns>false if not equal</returns>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.T480PcPersistencyManager">
+            <summary>
+            Persistency manager for writing ARG files
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480PcPersistencyManager.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480PcPersistencyManager.#ctor(System.String,Testo.Framework.Archive.DA.Interfaces.Description.IArchiveTreeDescriptionData,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Testo.Instrument.Testo480.T480PcPersistencyManager"/> class.
+            </summary>
+            <param name="strConnectionString">The STR connection string.</param>
+            <param name="treeDescriptionData">The tree description data.</param>
+            <param name="testoArchiveTreeDescription">The testo archive tree description.</param>
+            <param name="basePath">The base path.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480PcPersistencyManager.Store">
+            <summary>
+            Stores the data and the files.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480PcPersistencyManager.StoreNodeFilesRecursive(Testo.Framework.Archive.DA.OleDb.ArchiveNodeData)">
+            <summary>
+            Stores the node files recursive.
+            </summary>
+            <param name="node">The node.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480PcPersistencyManager.StoreChanged(Testo.Framework.Archive.DA.OleDb.ArchiveNodeData,Testo.Framework.Archive.DA.OleDb.ArchiveNodeData)">
+            <summary>
+            Executes the store changed.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="parentNode">The parent node.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480PcPersistencyManager.StoreUnChanged(Testo.Framework.Archive.DA.OleDb.ArchiveNodeData,Testo.Framework.Archive.DA.OleDb.ArchiveNodeData)">
+            <summary>
+            Executes the store unchanged.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="parentNode">The parent node.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480PcPersistencyManager.StoreDeleted(Testo.Framework.Archive.DA.OleDb.ArchiveNodeData,Testo.Framework.Archive.DA.OleDb.ArchiveNodeData)">
+            <summary>
+            Executes the store deleted.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="parentNode">The parent node.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480PcPersistencyManager.StoreNew(Testo.Framework.Archive.DA.OleDb.ArchiveNodeData,Testo.Framework.Archive.DA.OleDb.ArchiveNodeData)">
+            <summary>
+            Executes the store new.
+            </summary>
+            <param name="node">The node.</param>
+            <param name="parentNode">The parent node.</param>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480PcPersistencyManager.ArchiveTreeDescription">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480PcPersistencyManager.BasePath">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.T480Probe">
+            <summary>
+            part of the device driver to read/write probe data
+            </summary>
+        </member>
+        <member name="F:Testo.Instrument.Testo480.T480Probe.ListProbeTypes">
+            <summary>
+            Gets or sets the parent device.
+            </summary>
+            <value>The parent device.</value>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480Probe.#ctor(wrapmmgr.Wt480Probe)">
+            <summary>
+            constructor
+            </summary>
+            <param name="deviceProbe">The device probe</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480Probe.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480Probe.GetUnitsForPhysval(System.UInt32)">
+            <summary>
+            Gets the units for physval.
+            </summary>
+            <param name="physval">The physval.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480Probe.GetPhysValName(System.UInt32)">
+            <summary>
+            Gets the name of the phys val.
+            </summary>
+            <param name="physval">The physval.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480Probe.SaveCalinfoData">
+            <summary>
+            Saves the calinfo data.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480Probe.GetISOUnitbyPH(System.UInt32)">
+            <summary>
+            Gets the ISO unitby PH.
+            </summary>
+            <param name="dwPhysVal">The dw phys val.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.ProbeFileName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.DeviceProbe">
+            <summary>
+            Gets or sets the device probe.
+            </summary>
+            <value>The device probe.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.ProbeSerialNumber">
+            <summary>
+            Liest die Seriennumer eines Geräts
+            </summary>
+            <value>The serial number.</value>
+            <exception cref="T:Testo.Instrument.DeviceException">Wenn diese Methode von einer abgeleiteten Klasse
+            nicht implementiert ist, wird eine DeviceException vom Type DeviceError.NotImplemeted
+            geworfen.</exception>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.ProbeFimwareVersion">
+            <summary>
+            Gets the fimware version.
+            </summary>
+            <value>The fimware version.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.ProbeName">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name of the input.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.ProbeNameLabel">
+            <summary>
+            Gets the probe name label.
+            </summary>
+            <value>The probe name label.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.FirmwareVersionLabel">
+            <summary>
+            Gets or sets the firmware version label.
+            </summary>
+            <value>The firmware version label.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.AdjustmentTextLabel">
+            <summary>
+            Gets the adjustment text label.
+            </summary>
+            <value>The adjustment text label.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.AdjustmentHelpLabel">
+            <summary>
+            Gets the adjustment help label.
+            </summary>
+            <value>The adjustment help label.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.ProbeFimwareBuild">
+            <summary>
+            Gets or sets the probe fimware build.
+            </summary>
+            <value>The probe fimware build.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.CertificateNumber">
+            <summary>
+            Gets or sets the certificate number.
+            </summary>
+            <value>The certificate number.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.Points">
+            <summary>
+            Gets or sets the points.
+            </summary>
+            <value>The points.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.HasSensorsWithInvalidAdjustment">
+            <summary>
+            Gets a value indicating whether this instance has sensors with invalid adjustment.
+            </summary>
+            <value>
+            	<c>true</c> if this instance has sensors with invalid adjustment; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.SensorPhysvalsWithInvalidAdjustment">
+            <summary>
+            Gets the sensor physvals with invalid adjustment.
+            </summary>
+            <value>The sensor physvals with invalid adjustment.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.InvalidAdjustmentText">
+            <summary>
+            Gets the invalid adjustment text, empty if no sensor has invalid adjustments.
+            </summary>
+            <value>The invalid adjustment text.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.InvalidAdjustmentWarning">
+            <summary>
+            Gets the invalid adjustment text, empty if no sensor has invalid adjustments.
+            </summary>
+            <value>The invalid adjustment text.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.ProbeType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.LocalizedProbeTypeName">
+            <summary>
+            The name of the Probe
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.Image">
+            <summary>
+            Gets the image.
+            </summary>
+            <value>The image.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.AdjustmentUnits">
+            <summary>
+            All the Units of the device
+            </summary>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.MaxPoints">
+            <summary>
+            Gets or sets the max adjustment points.
+            </summary>
+            <value>The max adjustment points.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.MaxAdjustmentPoints">
+            <summary>
+            Gets or sets the max adjustment points.
+            </summary>
+            <value>The max adjustment points.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.AliasNameMaxLength">
+            <summary>
+            Gets the length of the alias name max.
+            </summary>
+            <value>The length of the alias name max.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.T480AdjustmentList">
+            <summary>
+            Gets the T480 adjustment list. This is the complete List for all physvals excluding the internal temperature channels
+            </summary>
+            <value>The T480 adjustment list.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480Probe.HasChanged">
+            <summary>
+            Gets or sets a value indicating whether this instance has changed.
+            </summary>
+            <value>
+            	<c>true</c> if this instance has changed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.ResourceHandler">
+            <summary>
+            Singleton class to get resource manager (caching for one assembly)
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.ResourceHandler.#cctor">
+            <summary>
+            static constructor
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.ResourceHandler.#ctor">
+            <summary>
+            private constructor
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.ResourceHandler.GetResourceManager">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.T480ProbeType">
+            <summary>
+            To hold name and image, example ProbeList
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.T480ProbeType.#ctor(System.String,System.String,System.Collections.Generic.List{Testo.Library.Measurement.Unit})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Testo.Instrument.Testo480.T480ProbeType"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="image">The image.</param>
+            <param name="adjustmentUnits">The adjustment units.</param>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480ProbeType.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480ProbeType.Image">
+            <summary>
+            Gets or sets the image.
+            </summary>
+            <value>The image.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.T480ProbeType.AdjustmentUnits">
+            <summary>
+            Gets or sets the adjustment units.
+            </summary>
+            <value>The adjustment units.</value>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.Testo480Storage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480Storage.#ctor(Testo.BusinessObjects.Measurement.Interfaces.IProtocolManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Testo.Instrument.Testo480.Testo480Storage"/> class.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480Storage.GetRootChildren">
+            <summary>
+            Returns the list of all root child nodes to fill the ExplorerTree
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480Storage.GetChildren(Testo.Base.StructureDescription.NodeType,Testo.Base.StructureDescription.NodeData)">
+            <summary>
+            Returns the list of all child nodes to fill the ExplorerTree
+            </summary>
+            <param name="parentType">Type of the parent.</param>
+            <param name="parentData">The parent data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480Storage.AddNodePath(System.Collections.Generic.Dictionary{Testo.Base.StructureDescription.NodeType,Testo.Base.StructureDescription.NodeData})">
+            <summary>
+            write node info to local lists of this instance from explorer.
+            </summary>
+            <param name="nodePath">The node path.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480Storage.Load(System.String,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,Testo.Framework.Archive.DA.Interfaces.Description.IArchiveNodeDescriptionData,Testo.DataAccess.Interfaces.IDeviceReadConfig,Testo.BusinessObjects.Instrument.Interfaces.IDeviceDescription)">
+            <summary>
+            Loads the specified framework root node data.
+            </summary>
+            <param name="strDeviceName">Name of the STR device.</param>
+            <param name="treeDescription">The tree description.</param>
+            <param name="rootNodeDescription">The root node description.</param>
+            <param name="config">The config.</param>
+            <param name="deviceDescription">The device description.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480Storage.Store(Testo.Framework.Archive.DA.Interfaces.IArchiveNodeData,Testo.BusinessObjects.Instrument.Interfaces.IDeviceDescription)">
+            <summary>
+            Stores the specified framework root node data.
+            </summary>
+            <param name="frameworkRootNodeData">The framework root node data.</param>
+            <param name="deviceDescription">The device description.</param>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480Storage.CopyNodeToPc(Testo.Framework.Archive.BL.Interfaces.IArchiveNode,Testo.BusinessObjects.Archive.Interfaces.ITestoArchiveTreeDescription,System.String,Testo.BusinessObjects.Instrument.Interfaces.IDeviceDescription)">
+            <summary>
+            Copies the node to pc.
+            </summary>
+            <param name="frameworkNodePc">The framework node pc.</param>
+            <param name="treeDescriptionPc">The tree description pc.</param>
+            <param name="databaseDataFolder">The database data folder.</param>
+            <param name="deviveDecription">The devive decription.</param>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480Storage.StoredDataExists">
+            <summary>
+            Returns true if there is any data that can be read by the persistency manager to build an archive tree.
+            </summary>
+            <value></value>
+            <remarks>
+            When the software that uses the archive modules is delivered to the user the first time, this property
+            will usually return false.
+            </remarks>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480Storage.DefaultMeasurementPrefix">
+            <summary>
+            Sets the default measurement prefix.
+            </summary>
+            <value>The default measurement prefix.</value>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:Testo.Instrument.Testo480.Testo480StorageStructure">
+            <summary>
+            dummy device explorer
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480StorageStructure.#ctor(Testo.DB.Config)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Testo.Instrument.Testo480.Testo480StorageStructure"/> class.
+            </summary>
+        </member>
+        <member name="M:Testo.Instrument.Testo480.Testo480StorageStructure.CreateTreeDescription">
+            <summary>
+            Creates the tree description.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480StorageStructure.RootDescription">
+            <summary>
+            Gets or sets the root description.
+            </summary>
+            <value>The root description.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480StorageStructure.AutomaticSave">
+            <summary>
+            Gets a value indicating whether [automatic save].
+            </summary>
+            <value><c>true</c> if [automatic save]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Testo.Instrument.Testo480.Testo480StorageStructure.AllowsToCopyProtocolsToDevice">
+            <summary>
+            Gets or sets a value indicating whether this description allows to copy protocols to device.
+            </summary>
+            <value>
+            	<c>true</c> if [allows copy protocols to device]; otherwise, <c>false</c>.
+            </value>
+        </member>
+    </members>
+</doc>
